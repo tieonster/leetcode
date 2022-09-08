@@ -4,7 +4,7 @@
 ## Iterative Approach using Queue
 # Check if root is null first
 
-# Initialize queue = [root]
+# Initialize queue = dequeu([root])
 
 while (len(queue)) > 0:
     current = queue.popleft() # Removes front element

@@ -11,7 +11,6 @@ Create rowBegin, rowEnd, colBegin, colEnd pointer <br />
 While loop at the start to make sure rowBegin <= rowEnd and colBegin <= colEnd <br />
 First, traverse right and increment rowBegin <br />
 Next, traverse down and decrement colEnd<br />
-3 conditions: <br />
 Next, traverse left and decrement rowEnd (Check if rowBegin < rowEnd to handle case if matrix is non square) <br />
 Lastly, traverse up and increment colBegin (Check if colBegin < colEnd to handle case if matrix is non square)<br />
 Handle edge cases (e.g. if matrix is non square) <br />
