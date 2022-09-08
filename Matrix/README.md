@@ -1,14 +1,10 @@
 # Questions attempted:
 
 ### Set Matrix Zeros
-General Idea is to use recursion <br />
-Create a function within the main function and call it recursively <br />
-Continue if high pointer is more than low pointer <br />
-3 conditions: <br />
-If target == middle value <br />
-elif target > middle value <br />
-elif target < middle value <br />
-[SOLUTION](https://www.youtube.com/watch?v=s4DPM8ct1pI)
+Create two separate arrays to store index of rows containing zeroes and columns containing zeroes <br />
+Iterate through matrix rows and change all rows containing 0 to 0. <br />
+Iterate through matrix columns and change all columns containing 0 to 0. <br />
+[SOLUTION](https://www.youtube.com/watch?v=T41rL0L3Pnw)
 
 ### Spiral Matrix
 Create rowBegin, rowEnd, colBegin, colEnd pointer <br />
