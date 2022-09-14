@@ -13,9 +13,11 @@
 # Method 1 (Recursion)
 class Solution:
     def maxDepth(self, root: Optional[TreeNode]) -> int:
+        # Check for empty tree
         if not root:
             return 0
         
+        # Check how many times algo recurses
         return 1 + max(self.maxDepth(root.left), self.maxDepth(root.right))
 
 

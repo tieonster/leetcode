@@ -23,3 +23,16 @@ Use a set to check for duplicates
 
 ### Two Sum
 [SOLUTION](https://www.youtube.com/watch?v=KLlXCFG5TnA)
+
+### Subarray Sums Divisible by k (Citadel Question)
+Has some math logic involved here <br />
+Basically, store the remainder of the cumSum in a separate array <br />
+Sum up according to the formula provided: <br />
+1) For keys with 0, increment with nC2 + n <br />
+2) Rest of the keys increment with nC2 <br />
+[SOLUTION](https://www.youtube.com/watch?v=u9m-hnlcydk)
+
+### Pairs of Songs with Total Duration Divisible by 60 (Goldman Sachs)
+Modulo all songs first <br />
+Create hashmap with counts <br />
+Increment count of new songs when looping through new songs list or hashmap (See code for both methods) <br />

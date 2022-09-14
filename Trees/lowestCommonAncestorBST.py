@@ -14,13 +14,17 @@
 #         self.left = None
 #         self.right = None
 
+# Idea here is that both p and q needs to be lower/higher than current.
+# Cannot have a situation where one is higher, one is lower. That would mean the lowest common ancestor is curr
 class Solution:
     def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
         curr = root
         
         while curr:
+            # if current node is smaller than p and q, move current node to rigth subtree
             if p.val > curr.val and q.val > curr.val:
                 curr = curr.right
+            # if current node is larger than p and q, move current node to left subtree
             elif p.val < curr.val and q.val < curr.val:
                 curr = curr.left
             else:

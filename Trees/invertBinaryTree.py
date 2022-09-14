@@ -23,7 +23,6 @@ class Solution:
                 queue.append(curr.left)
                 queue.append(curr.right)
 
-                
         return root
     
     ## Recursive
