@@ -80,3 +80,8 @@ Increment 1 everytime DFS is called <br />
 Use DFS recursive <br />
 If both p and q are not empty, return p.val == q.val and dfs(p.left, q.left) and dfs(p.right, q.right)
 [SOLUTION](https://www.youtube.com/watch?v=vRbbcKXCxOw&t=48s)
+
+### Diameter of a Binary Tree
+Use DFS recursive <br />
+Diameter and height of the tree are similar
+[SOLUTION](https://www.youtube.com/embed/bkxqA8Rfv04)

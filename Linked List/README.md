@@ -28,3 +28,9 @@ Set left pointer, left.next = left.next.next to delete the node <br />
 Return dummy linked list <br />
 [SOLUTION](https://www.youtube.com/watch?v=XVuQxVej6y8)
 To find out about linked list pointers and variable assignment, refer to iPad drawing or this [link:](https://stackoverflow.com/questions/58715870/explanation-about-dummy-nodes-and-pointers-in-linked-lists) 
+
+### Remove nth node from end of linked list
+Create fast and slow pointers to find out split between linked list <br />
+Reverse second half of linked list <br />
+Loop and change pointers of linked list <br />
+[SOLUTION](https://www.youtube.com/watch?v=S5bfdUTrKLM)

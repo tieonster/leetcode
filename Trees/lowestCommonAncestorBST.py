@@ -21,7 +21,7 @@ class Solution:
         curr = root
         
         while curr:
-            # if current node is smaller than p and q, move current node to rigth subtree
+            # if current node is smaller than p and q, move current node to right subtree
             if p.val > curr.val and q.val > curr.val:
                 curr = curr.right
             # if current node is larger than p and q, move current node to left subtree
