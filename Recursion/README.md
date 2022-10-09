@@ -32,3 +32,10 @@ Create a backtracking function within the main function and call it recursively 
 Base Case of when len(currString) == len(digits) then simply return <br />
 Have to loop through mappings in each digit, and call backtrack function in each letter within the loop <br />
 [SOLUTION](https://www.youtube.com/watch?v=0snEunUacZY)
+
+### Combination Sum
+General Idea is to use backtracking <br />
+Very similar to subsets and combinations problem <br />
+Base case is if sum comb > target <br />
+Neater solution on Neetcode to handle duplicates <br />
+[SOLUTION](https://www.youtube.com/watch?v=0snEunUacZY)
