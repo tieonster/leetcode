@@ -23,3 +23,20 @@ No solution will be posted as Neetcode didn't supply any :/ <br />
 Makes use of BFS algorithm <br />
 Store rotten oranges in queue and pop them one by one <br />
 Keep track of time and fresh oranges to exit loop <br />
+
+# Max Area of Islands
+Makes use of BFS algorithm <br />
+Store max size of islands in one variable<br />
+[SOLUTION](https://www.youtube.com/watch?v=iJGr1OtmH0c)
+
+# Surrounded Regions
+2 methods: <br />
+First method: <br />
+Find all regions using either bfs or dfs <br />
+After that, in the coordinates of each of this regions, if one of them lies on the border, then it means the entire region will not be converted to "X"s <br />
+If all coordinates do not contain border coordinate, then convert entire region to Xs. <br />
+Second method: <br />
+Transverse using dfs and capture all border coordinates that have "O" in them. Change these coordinates to "T" <br />
+Transverse using for loops and convert all "O" to "X" <br />
+Transverse through for loops and convert "T" back to "O" <br />
+[SOLUTION](https://www.youtube.com/watch?v=9z2BunfoZ5Y)
