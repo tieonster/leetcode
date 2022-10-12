@@ -34,3 +34,7 @@ Create fast and slow pointers to find out split between linked list <br />
 Reverse second half of linked list <br />
 Loop and change pointers of linked list <br />
 [SOLUTION](https://www.youtube.com/watch?v=S5bfdUTrKLM)
+
+### Add Two Numbers
+Solved using my own method but Neetcode provides a more efficient solution <br />
+[SOLUTION](https://www.youtube.com/watch?v=wgFPrzTjm7s)

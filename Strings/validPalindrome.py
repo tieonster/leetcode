@@ -30,8 +30,10 @@ class Solution:
                        ord("0") <= ord(char) <= ord("9"))
 
         while l < r:
+            # Skip alphanumeric characters (left pointer)
             while l < r and not alphaNum(s[l]):
                 l += 1
+            # Skip alphanumeric characters (right pointer)
             while r > l and not alphaNum(s[r]):
                 r -= 1
             if s[l].lower() != s[r].lower():
@@ -41,6 +43,9 @@ class Solution:
             r -= 1
         
         return True
+                
+                
+        
                 
                 
         
