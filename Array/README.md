@@ -36,3 +36,17 @@ Sum up according to the formula provided: <br />
 Modulo all songs first <br />
 Create hashmap with counts <br />
 Increment count of new songs when looping through new songs list or hashmap (See code for both methods) <br />
+
+### Container with Most Water
+Idea is to use 2 pointers <br />
+Set left and right pointers to both ends of the array <br />
+Idea is to maximise the water so it is a good idea to set length of container to maximum at first <br />
+Slowly increment/decrement left and right pointer based on which is smaller. <br />
+[SOLUTION](https://www.youtube.com/watch?v=UuiTKBwPgAo)
+
+### Longest Consecutive Sequence
+Need to check whether each element in nums is the start of a sequence <br />
+This can be done by iterating through each num, and then checking if the number immediately to the left of it exists <br />
+If it does not exist, means it is the start of the sequence <br />
+Then continue to append 1 to the length of current sequence until next number no longer exists in set. <br />
+[SOLUTION](https://www.youtube.com/watch?v=P6RZZMu_maU&t=363s)

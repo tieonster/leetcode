@@ -85,3 +85,15 @@ If both p and q are not empty, return p.val == q.val and dfs(p.left, q.left) and
 Use DFS recursive <br />
 Diameter and height of the tree are similar
 [SOLUTION](https://www.youtube.com/embed/bkxqA8Rfv04)
+
+### Balanced Binary Tree
+Use DFS recursive <br />
+Return 2 parameters for every dfs call, one to keep track if tree is balanced, one to keep track height of tree <br />
+[SOLUTION](https://www.youtube.com/embed/bkxqA8Rfv04)
+
+### Validate Binary Search Tree
+Create another helper function that uses recursion <br />
+Have a left and right boundary for each iteration of the recusion <br />
+Check if current node value lies between left and right boundary. If it does not, then return false <br />
+Otherwise, iterate through the remaining subtrees recursively <br />
+[SOLUTION](https://www.youtube.com/watch?v=s6ATEkipzow)

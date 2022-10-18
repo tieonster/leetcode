@@ -40,3 +40,8 @@ Transverse using dfs and capture all border coordinates that have "O" in them. C
 Transverse using for loops and convert all "O" to "X" <br />
 Transverse through for loops and convert "T" back to "O" <br />
 [SOLUTION](https://www.youtube.com/watch?v=9z2BunfoZ5Y)
+
+# Course Schedule (Good adjacency list question)
+Idea is to create an adjacency list and use dfs <br />
+Idea is to return True or False based on whether the course can be done <br />
+[SOLUTION](https://www.youtube.com/watch?v=EgI5nU9etnU)
