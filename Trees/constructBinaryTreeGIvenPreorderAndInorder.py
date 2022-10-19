@@ -11,6 +11,13 @@
 #         self.left = left
 #         self.right = right
 
+# First element in preorder traversal is always the root of the binary tree
+# Element to the immediate right of this first element is the root of the left subtree
+
+# Find this first element in preorder traversal and split inorder traversal into 2 parts
+# Left elements of splitted list is on the left subtree, right elements of splitted list is on the right subtree
+
+
 class Solution:
     def buildTree(self, preorder: List[int], inorder: List[int]) -> Optional[TreeNode]:
         if not preorder or not inorder:
