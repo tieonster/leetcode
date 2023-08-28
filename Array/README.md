@@ -19,10 +19,19 @@ Use a set to check for duplicates
 
 
 ### Product of Array Except Self
+To solve this problem in O(n) time complexity without using the division operation, you can utilize two arrays: one to store the product of all elements to the left of the current element, and another to store the product of all elements to the right of the current element. Then, you can multiply these two arrays element-wise to get the final answer.
 [SOLUTION](https://www.youtube.com/watch?v=bNvIQI2wAjk)
 
 ### Two Sum
+Use a hashmap to store the values already iterated through
 [SOLUTION](https://www.youtube.com/watch?v=KLlXCFG5TnA)
+
+### Two Sum II
+Use a 2-pointer approach
+
+### Three Sum
+Use a two pointer approach within a for loop (Two Sum and Two Sum II combined)
+[SOLUTION](https://www.youtube.com/watch?v=jzZsG8n2R9A)
 
 ### Subarray Sums Divisible by k (Citadel Question)
 Has some math logic involved here <br />
@@ -45,8 +54,7 @@ Slowly increment/decrement left and right pointer based on which is smaller. <br
 [SOLUTION](https://www.youtube.com/watch?v=UuiTKBwPgAo)
 
 ### Longest Consecutive Sequence
-Need to check whether each element in nums is the start of a sequence <br />
-This can be done by iterating through each num, and then checking if the number immediately to the left of it exists <br />
-If it does not exist, means it is the start of the sequence <br />
-Then continue to append 1 to the length of current sequence until next number no longer exists in set. <br />
+The idea is to first populate the hash set with all the elements from the array, and then for each element, <br /> 
+check if the consecutive elements are present in the hash set. This way, you can count the length <br />
+of the consecutive sequence for each element. <br />
 [SOLUTION](https://www.youtube.com/watch?v=P6RZZMu_maU&t=363s)

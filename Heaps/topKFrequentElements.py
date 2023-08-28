@@ -28,6 +28,7 @@ class Solution:
                 counts[num] += 1
         
         # Convert counts to tuple for heap processing, add negative sign to value since we are using max heap
+        # Heapify works on list of tuples, and orders by first element in each tuple
         count_pairs = [(-v, k) for k, v in counts.items()]
         
         heapq.heapify(count_pairs)

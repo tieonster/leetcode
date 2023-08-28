@@ -35,3 +35,22 @@ else, set high to middle <br />
 return low at the end <br />
 [PseudoCode] (https://www.codingninjas.com/codestudio/library/kth-smallest-element-in-a-row-wise-and-column-wise-sorted-2d-array)
 [YOUTUBE SOLUTION](https://www.youtube.com/watch?v=0d6WF79hQME)
+
+### Find Minimum in Rotated Sorted Array
+In this algorithm:
+
+The left and right pointers define the search range. Initially, they point to the first and last elements of the array. <br /> 
+Inside the loop, you calculate the middle index mid using (left + right) // 2. <br />
+Compare the value at nums[mid] with the value at nums[right]: <br />
+If nums[mid] is greater than nums[right], it means the minimum element is on the right side. Move the left  pointer to mid + 1. <br />
+Otherwise, the minimum element is on the left side or at mid. Move the right pointer to mid. <br />
+The loop continues until the left pointer is equal to the right pointer, which means you've found the minimum element. <br />
+This algorithm effectively narrows down the search range by half in each iteration, resulting in O(log n) time complexity. <br />
+
+
+
+
+
+
+[PseudoCode] (https://www.codingninjas.com/codestudio/library/kth-smallest-element-in-a-row-wise-and-column-wise-sorted-2d-array)
+[YOUTUBE SOLUTION](https://www.youtube.com/watch?v=0d6WF79hQME)
