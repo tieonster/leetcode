@@ -7,7 +7,10 @@
 
 
 # Create another helper function that uses recursion
-# Have a left and right boundary for each iteration of the recursion
+# Have a left and right boundary for each iteration of the recursion. 
+# This boundary needs to be updated in every iteration of the dfs
+# any node on the left of the root, even grandchild, has to be smaller than the root node.
+# Every node on the right of the root, even the grandchildren, has to be larger than the root node. 
 # Check if the current node value lies between left and right boundary. If it does not, then return false
 # Otherwise, iterate through the remaining subtrees recursively.
 

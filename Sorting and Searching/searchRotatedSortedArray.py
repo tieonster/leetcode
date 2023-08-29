@@ -8,43 +8,45 @@
 # You must write an algorithm with O(log n) runtime complexity.
 
 
-# Idea here is to conduct a binary search, but this time there are more conditions
+# Idea here is to conduct a binary search, but this time there are more conditions (4 cases in total)
 # Uses the iterative method here
 # Create 3 separate left, middle, right pointers
 # While loop to check if l <= r
 # return middle if target == middle number
-# Search left portion: i.e. If number on left less than middle number, than 2 things can happen
-# if target > middle number (Search right portion by right) or if target < left number (Search Right portion)
-# Set l = mid + 1
-# else set r = mid - 1
-# Search right portion:
-# if target < middle number (Search left portion by right) or if target > right number (Search left portion)
-# Set r = mid - 1
-# else set l = mid + 1
+# Search left portion: i.e. If number on left less than middle number, means the left portion is strictly increasing
+# Next check: if target <= middle number and if target >= left number, means target lies within there, search left portion
+# Set r = middle - 1 to search left portion
+# else set l = middle + 1 to search right portion
+# Search right portion: i.e. If number on right greater than middle number, means the right portion is strictly increasing
+# if target >= middle number and if target <= right number, means target lies within right portion.
+# Set l = middle + 1 to search right portion
+# else set r = mid - 1 to search in left portion
 # Break out of while loop and return -1
 
 class Solution:
     def search(self, nums: List[int], target: int) -> int:
-            l, r = 0, len(nums) - 1
-                
-            while l <= r:
-                mid = (l+r) // 2
-                if target == nums[mid]:
-                    return mid
+        left, right = 0, len(nums) - 1
 
-                # left sorted portion
-                if nums[l] <= nums[mid]:
-                    if target > nums[mid] or target < nums[l]:
-                        l = mid + 1 # Search the right portion if target is more than middle number or if target is less than extreme left array entry
-                    else:
-                        r = mid - 1
+        while left <= right:
+            middle = (left + right) // 2
 
-                # right sorted portion
+            if nums[middle] == target:
+                return middle
+            
+            # left sorted portion (Only one side is strictly increasing)
+            if nums[left] <= nums[middle]: # Check if its strictly increasing 
+                if target <= nums[middle] and target >= nums[left]: # If target less than middle and target more than left, then search the left portion
+                    right = middle - 1
+
                 else:
-                    if target < nums[mid] or target > nums[r]:
-                        r = mid - 1
+                    left = middle + 1
+                    
+            # right sorted portion, (Only one side is strictly increasing)
+            else:
+                if target >= nums[middle] and target <= nums[right]:
+                    left = middle + 1
 
-                    else:
-                        l = mid + 1
-            return -1
-                        
+                else:
+                    right = middle - 1
+
+        return -1

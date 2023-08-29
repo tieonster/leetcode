@@ -24,6 +24,7 @@ If not set l = mid + 1 <br />
 Need to understand all the discrete cases <br />
 See neetcode video solution for a better understanding <br />
 [SOLUTION](https://www.youtube.com/watch?v=U8XENwh8Oy8)
+[SOLUTION](https://www.youtube.com/watch?v=oTfPJKGEHcc)
 
 ### Kth smallest element in a sorted matrix
 Binary Search Method <br />
