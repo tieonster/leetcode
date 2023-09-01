@@ -7,7 +7,8 @@
 # The test cases are generated such that the number of unique combinations that sum up to target is less than 150 combinations for the given input.
 
 # Approach is to use backtracking, calling it recursively
-# In the dfs function bel
+# In the dfs function below, keep calling the next item
+# Keep track if i and the total to see if it hits total sum
 
 class Solution:
     def combinationSum(self, candidates: List[int], target: int) -> List[List[int]]:
