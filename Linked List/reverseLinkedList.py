@@ -14,7 +14,7 @@
 class Solution:
     def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
         prev, curr = None, head # Create 2 pointers
-        while head: # While head is not empty
+        while curr: # While head is not empty
             nxt = curr.next # Temporary variable
             curr.next = prev # Set head to next node
 

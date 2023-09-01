@@ -23,7 +23,7 @@ class Solution:
         if not preorder or not inorder:
             return None
         root = TreeNode(preorder[0])
-        mid = inorder.index(preorder[0])
+        mid = inorder.index(preorder[0]) # Index of mid basically tells us how many nodes we want in the left subtree
         root.left = self.buildTree(preorder[1:mid+1], inorder[0:mid])
         root.right= self.buildTree(preorder[mid+1:], inorder[mid+1:])
         return root
