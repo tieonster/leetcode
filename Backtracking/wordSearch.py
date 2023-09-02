@@ -5,6 +5,11 @@
 
 # Backtracking approach
 # Have dfs function, which takes one input to keep track of current length of word
+# Need to have a path set to keep track of paths visited so far
+# if current iteration, i is same length as word, return True
+# if r < 0, c < 0 or r >= rows or c >= cols or board[r][c] != word[i] or (r,c) in path, return False
+# if not add to current path, and do dfs
+# remove path after that
 
 class Solution:
     def exist(self, board: List[List[str]], word: str) -> bool:

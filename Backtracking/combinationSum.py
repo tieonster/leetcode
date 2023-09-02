@@ -8,7 +8,7 @@
 
 # Approach is to use backtracking, calling it recursively
 # In the dfs function below, keep calling the next item
-# Keep track if i and the total to see if it hits total sum
+# Keep track of i and the total to see if it hits total sum
 
 class Solution:
     def combinationSum(self, candidates: List[int], target: int) -> List[List[int]]:

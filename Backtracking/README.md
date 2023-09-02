@@ -1,11 +1,17 @@
 # Questions attempted:
 
 ### Combination Sum
+Approach is to use backtracking, calling it recursively <br />
+In the dfs function below, keep calling the next item <br />
+Keep track if i and the total to see if it hits total sum <br />
+[SOLUTION](https://www.youtube.com/watch?v=GBKI9VSKdGg)
+
+### Word Search
+Backtracking approach <br /> 
+Have dfs function, which takes one input to keep track of current length of word <br />
+if current iteration, i is same length as word, return True <br />
+[SOLUTION](https://www.youtube.com/watch?v=pfiQ_PS1g8E)
+
+### Generate Parantheses
 Idea is to use a stack <br />
-Create a hashmap that matches each closing bracket to its corresponding open bracket <br />
-Loop through each character in the string <br />
-Append it to the stack if character is opening bracket <br />
-If char is closing bracket, then check to see if the last element in the stack is its corresponding opening bracket. If it is, then pop that opening bracket and continue <br />
-If not return False <br />
-Return true is loop is finished <br />
-[SOLUTION](https://www.youtube.com/watch?v=WTzjTskDFMg)
+[SOLUTION](https://www.youtube.com/watch?v=s9fokUqJ76A)
