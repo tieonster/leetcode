@@ -58,3 +58,14 @@ The idea is to first populate the hash set with all the elements from the array,
 check if the consecutive elements are present in the hash set. This way, you can count the length <br />
 of the consecutive sequence for each element. <br />
 [SOLUTION](https://www.youtube.com/watch?v=P6RZZMu_maU&t=363s)
+
+### Jump
+Greedy Approach <br />
+Goal is to iterate from the last element <br />
+Set goal variable which contains the index of the last element <br />
+Check if the index + number of jumps on the index is more than or equals to the goal index <br />
+If it fulfills the criteria, it means that it is able to jump from the current index to the goal index <br />
+Set goal to the current index <br />
+After finishing the loop, if the goal is at index 0, it means that it is successful. <br />
+Return True, else Return False <br /> 
+[SOLUTION](https://www.youtube.com/watch?v=Yan0cv2cLy8)

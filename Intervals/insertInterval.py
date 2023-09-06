@@ -6,33 +6,35 @@
 
 
 # Consider 3 cases:
-# 1) Case where newInterval is larger than current interval, then just append current interval to res array
-# 2) Case where newInterval is smaller than current interval, then just append new interval to res array, and set newInterval to current interval
-# 3) Case where both intervals overlap with one another, then merge overlaps
+# 1) Case where newInterval is smaller than current array, then just append newInterval to res and exit for loop
+# 2) Case where newInterval is larger than current interval, then just append current to res array
+# 3) Case where both intervals overlap with one another, merge overlaps, but don't append anything
+# After for loop is completed, append the newInterval to res to make sure that overlapped interval gets appended
 
 class Solution:
     def insert(self, intervals: List[List[int]], newInterval: List[int]) -> List[List[int]]:
+        def mergeIntervals(a, b):
+            return [min(a[0], b[0]), max(a[1], b[1])]
+
         res = []
         
-        if len(intervals) == 0:
-            return [newInterval]
-        
-        # Loop through current intervals 
-        for index, interval in enumerate(intervals):
+        for i, interval in enumerate(intervals):
             
-            # Case where newInterval is greater than interval
-            if interval[1] < newInterval[0]:
-                res.append(interval)
-                
-            # Case where interval is greater than newInterval
-            elif interval[0] > newInterval[1]:
+            # If new interval has the second number smaller than the current interval first number
+            if newInterval[1] < interval[0]:
                 res.append(newInterval)
-                newInterval = interval
-            
-            # Case where there is overlap between interval and newInterval
-            elif interval[0] <= newInterval[1] and newInterval[0] <= interval[1]:
-                newInterval = [min(interval[0], newInterval[0]), max(interval[1], newInterval[1])]
+                return res + intervals[i:]
 
+            # If the new interval has the 1st number larger than the current interval second number
+            elif newInterval[0] > interval[1]:
+                res.append(interval)
+
+            else:
+                # Set newInterval to new value after merging so that you can compare this new interval
+                newInterval = mergeIntervals(interval, newInterval)
+            
         res.append(newInterval)
+
         return res
+            
         

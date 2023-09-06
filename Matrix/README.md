@@ -15,3 +15,10 @@ Next, traverse left and decrement rowEnd (Check if rowBegin < rowEnd to handle c
 Lastly, traverse up and increment colBegin (Check if colBegin < colEnd to handle case if matrix is non square)<br />
 Handle edge cases (e.g. if matrix is non square) <br />
 [SOLUTION](https://www.youtube.com/watch?v=BJnMZNwUk1M)
+
+### Rotate Image
+Switch the rows up and down <br />
+If you have n rows, switch the first row and the nth row. Switch the 2nd row with the (n-1)th row <br />
+Transpose the matrix after that <br />
+There is a more optimal neetcode solution check it out here: <br />
+[SOLUTION](https://www.youtube.com/watch?v=fMSJSS7eO1w)
