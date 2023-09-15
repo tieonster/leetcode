@@ -14,7 +14,7 @@ Next, traverse down and decrement colEnd<br />
 Next, traverse left and decrement rowEnd (Check if rowBegin < rowEnd to handle case if matrix is non square) <br />
 Lastly, traverse up and increment colBegin (Check if colBegin < colEnd to handle case if matrix is non square)<br />
 Handle edge cases (e.g. if matrix is non square) <br />
-[SOLUTION](https://www.youtube.com/watch?v=BJnMZNwUk1M)
+[SOLUTION](https://www.youtube.com/watch?v=BJnMZNwUk1M) 
 
 ### Rotate Image
 Switch the rows up and down <br />
