@@ -19,8 +19,6 @@ class Solution:
         window_len = len(s1)
         l = 0
         r = window_len - 1
-
-        # Use default dict
         chars_s1 = collections.defaultdict(lambda: 0)
         chars = collections.defaultdict(lambda: 0)
         
@@ -28,38 +26,44 @@ class Solution:
         for char in s1:
             chars_s1[char] += 1
 
-        # Get char count of initial window
+        # Get char count in s2
         for i in range(window_len):
             chars[s2[i]] += 1
 
+        # Check if char count in s1 is the same as s2
         if chars == chars_s1:
             return True
 
+        # Check for the rest of the windows in s2
         else:
             while r < len(s2):
-                # Remove char count of left pointer
                 chars[s2[l]] -= 1
-
-                # Remove key if zero in value
+                
+                # Remove entry if its 0
                 if chars[s2[l]] == 0:
                     chars.pop(s2[l])
-                
-                # Move window
+
+                # Move window 
                 l += 1
                 r += 1
 
-                # Increase char count of right pointer
+                # Add to s2 char count
                 if r < len(s2):
                     chars[s2[r]] += 1
 
                 else:
                     break
-
+                # Check if s1 count is the same as s2
                 if chars == chars_s1:
                     return True
 
         
         return False
+                
+
+                
+
+        
                 
 
                 
